@@ -31,7 +31,7 @@ class PortContentProvider : ContentProvider() {
       sortOrder: String?,
   ): Cursor? {
     if (MATCHER.match(uri) != PORT_CODE) return null
-    val appGraph = (context!!.applicationContext as AiServiceApplication).appGraph
+    val appGraph = (context!!.applicationContext as AltioApplication).appGraph
     val port = runBlocking { appGraph.server.port.first() } ?: -1
     return MatrixCursor(arrayOf(COLUMN_PORT)).apply { addRow(arrayOf(port)) }
   }

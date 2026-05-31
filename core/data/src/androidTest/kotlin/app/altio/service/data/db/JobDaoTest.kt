@@ -24,7 +24,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class JobDaoTest {
 
-  private lateinit var db: AiServiceDatabase
+  private lateinit var db: AltioDatabase
   private lateinit var dao: JobDao
 
   @Before
@@ -32,7 +32,7 @@ class JobDaoTest {
     db =
         Room.inMemoryDatabaseBuilder(
                 ApplicationProvider.getApplicationContext(),
-                AiServiceDatabase::class.java,
+                AltioDatabase::class.java,
             )
             .allowMainThreadQueries()
             .build()

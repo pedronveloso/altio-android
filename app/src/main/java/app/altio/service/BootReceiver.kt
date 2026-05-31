@@ -20,7 +20,7 @@ class BootReceiver : BroadcastReceiver() {
     if (intent.action != Intent.ACTION_BOOT_COMPLETED) return
 
     val pending = goAsync()
-    val appGraph = (context.applicationContext as AiServiceApplication).appGraph
+    val appGraph = (context.applicationContext as AltioApplication).appGraph
 
     CoroutineScope(Dispatchers.IO).launch {
       try {

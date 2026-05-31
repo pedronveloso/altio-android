@@ -26,7 +26,7 @@ Pure Kotlin module. No Android framework dependencies. Contains:
 - **Repository interfaces**: `ModelRepository`, `SessionRepository`, `JobRepository`
 - **Runtime interfaces**: `RuntimeProvider`, `RuntimeSession`, `StreamingCallback`
 - **Use cases**: `CreateSessionUseCase`, `SubmitJobUseCase`, `CancelJobUseCase`, `GetJobStatusUseCase`
-- **Error types**: sealed `AiServiceError` hierarchy
+- **Error types**: sealed `AltioError` hierarchy
 
 Dependencies: none (pure Kotlin + Coroutines)
 
@@ -35,7 +35,7 @@ Dependencies: none (pure Kotlin + Coroutines)
 ### `:core:data`
 Android library. Implements the repository interfaces from `:core:domain`.
 
-- **Room database**: `AiServiceDatabase` with DAOs for `SessionEntity`, `JobEntity`, `ModelEntity`
+- **Room database**: `AltioDatabase` with DAOs for `SessionEntity`, `JobEntity`, `ModelEntity`
 - **DataStore**: `SettingsRepository` (server port, auth tokens, idle timeout)
 - **Download infrastructure**: `ModelDownloadRepository` using WorkManager + CoroutineWorker
   - Resumable HTTP downloads with `Range` headers

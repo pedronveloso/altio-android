@@ -8,7 +8,7 @@ import android.app.NotificationManager
 import android.content.Context
 
 object AppNotificationChannels {
-  const val SERVICE_STATUS_CHANNEL_ID = "ai_service_status"
+  const val SERVICE_STATUS_CHANNEL_ID = "altio_service_status"
   const val MODEL_DOWNLOADS_CHANNEL_ID = "model_downloads"
   const val SERVICE_STATUS_NOTIFICATION_ID = 1001
   const val MODEL_DOWNLOAD_NOTIFICATION_ID = 1002
@@ -22,7 +22,7 @@ object AppNotificationChannels {
     context.notificationManager.createNotificationChannel(
         NotificationChannel(
                 SERVICE_STATUS_CHANNEL_ID,
-                "AI Service",
+                "Altio Service",
                 NotificationManager.IMPORTANCE_LOW,
             )
             .apply { description = "Local AI HTTP server status" }

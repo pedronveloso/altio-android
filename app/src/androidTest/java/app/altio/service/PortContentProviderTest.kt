@@ -21,7 +21,7 @@ class PortContentProviderTest {
   @Test
   fun query_returnsActivePortFromAppGraph() {
     val context = InstrumentationRegistry.getInstrumentation().targetContext
-    val appGraph = (context.applicationContext as AiServiceApplication).appGraph
+    val appGraph = (context.applicationContext as AltioApplication).appGraph
 
     val expectedPort = runBlocking { appGraph.server.port.first() } ?: -1
 

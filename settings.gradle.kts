@@ -25,7 +25,7 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "AI Service"
+rootProject.name = "Altio Service"
 
 include(":app")
 

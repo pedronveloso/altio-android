@@ -179,7 +179,7 @@ private fun Throwable.isInvalidSession(): Boolean =
     this is NotFoundException && apiError?.code == ApiErrorCode.SESSION_NOT_FOUND
 
 /**
- * Minimal chat screen that demonstrates real-time token streaming from the AI service.
+ * Minimal chat screen that demonstrates real-time token streaming from the Altio service.
  *
  * @param chatState Shared conversation state that survives tab switches.
  */

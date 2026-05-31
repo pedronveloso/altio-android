@@ -9,7 +9,7 @@ import android.content.Intent
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.room.Room
 import androidx.work.WorkManager
-import app.altio.service.data.db.AiServiceDatabase
+import app.altio.service.data.db.AltioDatabase
 import app.altio.service.data.db.ClientTokenDao
 import app.altio.service.data.db.DatabaseMigrations
 import app.altio.service.data.db.DurableStateDatabase
@@ -58,7 +58,7 @@ private val Application.settingsDataStore by preferencesDataStore(name = "settin
 
 @DependencyGraph(AppScope::class)
 interface AppGraph : MetroAppComponentProviders {
-  val runtimeDatabase: AiServiceDatabase
+  val runtimeDatabase: AltioDatabase
   val durableDatabase: DurableStateDatabase
   val server: AiHttpServer
   val workerFactory: AppWorkerFactory
@@ -90,15 +90,15 @@ interface AppGraph : MetroAppComponentProviders {
 
   @Provides
   @SingleIn(AppScope::class)
-  fun provideRuntimeDatabase(application: Application): AiServiceDatabase =
-      Room.databaseBuilder(application, AiServiceDatabase::class.java, "ai_service_runtime.db")
+  fun provideRuntimeDatabase(application: Application): AltioDatabase =
+      Room.databaseBuilder(application, AltioDatabase::class.java, "altio_runtime.db")
           .addMigrations(*DatabaseMigrations.runtime)
           .build()
 
   @Provides
   @SingleIn(AppScope::class)
   fun provideDurableDatabase(application: Application): DurableStateDatabase =
-      Room.databaseBuilder(application, DurableStateDatabase::class.java, "ai_service_durable.db")
+      Room.databaseBuilder(application, DurableStateDatabase::class.java, "altio_durable.db")
           .addMigrations(*DatabaseMigrations.durable)
           .build()
 
@@ -135,7 +135,7 @@ interface AppGraph : MetroAppComponentProviders {
 
   @Provides
   @SingleIn(AppScope::class)
-  fun provideSessionRepository(db: AiServiceDatabase): SessionRepository =
+  fun provideSessionRepository(db: AltioDatabase): SessionRepository =
       SessionRepositoryImpl(db.sessionDao())
 
   @Provides
@@ -147,7 +147,7 @@ interface AppGraph : MetroAppComponentProviders {
 
   @Provides
   @SingleIn(AppScope::class)
-  fun provideJobRepository(db: AiServiceDatabase): JobRepository = JobRepositoryImpl(db.jobDao())
+  fun provideJobRepository(db: AltioDatabase): JobRepository = JobRepositoryImpl(db.jobDao())
 
   @Provides
   @SingleIn(AppScope::class)

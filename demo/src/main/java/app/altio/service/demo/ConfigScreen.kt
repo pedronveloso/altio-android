@@ -31,8 +31,8 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 
 /**
- * Configuration screen shown on first launch. User enters the port the AI service is listening on
- * and a valid bearer token. These are persisted by the caller.
+ * Configuration screen shown on first launch. User enters the port the Altio service is listening
+ * on and a valid bearer token. These are persisted by the caller.
  */
 @Composable
 fun ConfigScreen(
@@ -42,7 +42,7 @@ fun ConfigScreen(
     onTokenChange: (String) -> Unit,
     onConnect: (port: Int, token: String) -> Unit,
     modifier: Modifier = Modifier,
-    title: String = "Connect to AI Service",
+    title: String = "Connect to Altio Service",
     subtitle: String = "Enter the loopback port and bearer token shown in the main app.",
     errorMessage: String? = null,
     emphasizePortOverride: Boolean = false,

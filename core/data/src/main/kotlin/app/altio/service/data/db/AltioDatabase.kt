@@ -17,7 +17,7 @@ import androidx.room.TypeConverters
     exportSchema = false,
 )
 @TypeConverters(ModelStatusConverter::class, InstantConverter::class, JobTypeConverter::class)
-abstract class AiServiceDatabase : RoomDatabase() {
+abstract class AltioDatabase : RoomDatabase() {
   abstract fun sessionDao(): SessionDao
 
   abstract fun jobDao(): JobDao

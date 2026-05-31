@@ -111,7 +111,7 @@ Use Room's in-memory database and `WorkManagerTestInitHelper`.
 ### `SessionDaoTest`
 ```kotlin
 @Test fun `createSession then getById returns the session`() = runTest {
-    val db = Room.inMemoryDatabaseBuilder(context, AiServiceDatabase::class.java).build()
+    val db = Room.inMemoryDatabaseBuilder(context, AltioDatabase::class.java).build()
     val dao = db.sessionDao()
     val entity = SessionEntity(id = "ses_1", clientId = "c1", ...)
     dao.insert(entity)
