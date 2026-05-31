@@ -106,7 +106,7 @@ Key behaviors (mirroring Edge Gallery's `DownloadWorker`):
 ```kotlin
 class DownloadRepository(
     private val workManager: WorkManager,
-    private val db: AiServiceDatabase,
+    private val db: AltioDatabase,
 ) {
     fun startDownload(modelId: String) {
         val request = OneTimeWorkRequestBuilder<ModelDownloadWorker>()

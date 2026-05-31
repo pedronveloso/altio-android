@@ -206,7 +206,7 @@ internal fun rememberAudioScreenState(
 }
 
 /**
- * Lets the user record AAC audio or pick any audio file, upload it to the AI service for
+ * Lets the user record AAC audio or pick any audio file, upload it to the Altio service for
  * transcription, and display the resulting transcript once the job completes.
  *
  * Recordings are captured via [AacRecorder] (64 kbps mono AAC, smaller files over the wire). The

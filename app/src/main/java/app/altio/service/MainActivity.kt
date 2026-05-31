@@ -93,7 +93,7 @@ import app.altio.service.ui.settings.SettingsModels
 import app.altio.service.ui.settings.SettingsScreen
 import app.altio.service.ui.setup.PermissionsScreen
 import app.altio.service.ui.setup.WelcomeScreen
-import app.altio.service.ui.theme.AiServiceTheme
+import app.altio.service.ui.theme.AltioTheme
 import app.altio.service.ui.token.TokenManagerScreen
 import app.altio.service.ui.token.TokenManagerTokens
 import java.util.UUID
@@ -134,7 +134,7 @@ class MainActivity : ComponentActivity() {
     enableEdgeToEdge()
     NotificationPermissionHelper.ensureNotificationChannels(this)
 
-    val appGraph = (application as AiServiceApplication).appGraph
+    val appGraph = (application as AltioApplication).appGraph
     val devicePowerManager =
         DevicePowerManager(
             this,
@@ -142,7 +142,7 @@ class MainActivity : ComponentActivity() {
         )
 
     setContent {
-      AiServiceTheme {
+      AltioTheme {
         AppContent(
             appGraph = appGraph,
             devicePowerManager = devicePowerManager,

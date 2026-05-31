@@ -291,7 +291,7 @@ private fun DemoApp(
             currentDraftToken = it
             onSaveDraftConfig(currentDraftPort, currentDraftToken)
           },
-          title = "Reconnect to AI Service",
+          title = "Reconnect to Altio Service",
           subtitle =
               "The last successful connection could not be reused. Update the port and retry. You can replace the token if needed.",
           errorMessage = recoveryReason,

@@ -16,7 +16,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
-class AiServiceApplication : Application(), MetroApplication, Configuration.Provider {
+class AltioApplication : Application(), MetroApplication, Configuration.Provider {
   val appGraph: AppGraph by lazy { createGraphFactory<AppGraph.Factory>().create(this) }
   private val startupScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 

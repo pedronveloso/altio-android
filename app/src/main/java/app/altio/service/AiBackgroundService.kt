@@ -49,7 +49,7 @@ class AiBackgroundService : Service() {
   override fun onCreate() {
     super.onCreate()
     Timber.i("AiBackgroundService created")
-    appGraph = (application as AiServiceApplication).appGraph
+    appGraph = (application as AltioApplication).appGraph
     appGraph.idleSessionCleaner
     runCatching {
           AppNotificationChannels.ensureServiceStatus(this)

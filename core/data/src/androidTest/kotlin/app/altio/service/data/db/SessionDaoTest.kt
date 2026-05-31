@@ -22,7 +22,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class SessionDaoTest {
 
-  private lateinit var db: AiServiceDatabase
+  private lateinit var db: AltioDatabase
   private lateinit var dao: SessionDao
 
   @Before
@@ -30,7 +30,7 @@ class SessionDaoTest {
     db =
         Room.inMemoryDatabaseBuilder(
                 ApplicationProvider.getApplicationContext(),
-                AiServiceDatabase::class.java,
+                AltioDatabase::class.java,
             )
             .allowMainThreadQueries()
             .build()
