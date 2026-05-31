@@ -1,0 +1,22 @@
+/*
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+android {
+  compileSdk 36
+
+  defaultConfig {
+    minSdk 31
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  lint {
+    warningsAsErrors true
+    disable += "GradleDependency"
+    disable += "ExpiredTargetSdkVersion"
+    disable += "OldTargetApi"
+  }
+}

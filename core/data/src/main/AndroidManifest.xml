@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        WorkManager's SystemForegroundService must declare the foreground service type it uses.
+        ModelDownloadWorker creates ForegroundInfo with FOREGROUND_SERVICE_TYPE_DATA_SYNC.
+        tools:node="merge" lets the app manifest override if a more specific type is needed.
+    -->
+    <application>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
+    </application>
+
+</manifest>

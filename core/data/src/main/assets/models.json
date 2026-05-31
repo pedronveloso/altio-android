@@ -1,0 +1,88 @@
+{
+  "models": [
+    {
+      "id": "gemma-4-e2b-it",
+      "name": "Gemma 4 E2B IT",
+      "description": "Gemma 4 multimodal: text, vision, audio, thinking. 2.6 GB. Requires 8 GB device RAM.",
+      "version": "b4f4f4df93418ddb4aa7da8bf33b584602a5b9f8",
+      "huggingface_repo": "litert-community/gemma-4-E2B-it-litert-lm",
+      "size_bytes": 2588147712,
+      "sha256": "181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c",
+      "capabilities": ["text", "vision", "audio", "thinking"],
+      "min_sdk": 31,
+      "min_device_memory_gb": 8,
+      "max_context_length": 32000,
+      "runtime": "litert-lm",
+      "files": [
+        {
+          "name": "gemma-4-E2B-it.litertlm",
+          "size_bytes": 2588147712,
+          "sha256": "181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c"
+        }
+      ],
+      "default_config": {
+        "top_k": 64,
+        "top_p": 0.95,
+        "temperature": 1.0,
+        "max_tokens": 4000,
+        "accelerators": ["gpu", "cpu"]
+      }
+    },
+    {
+      "id": "qwen-3.5-2b-instruct",
+      "name": "Qwen 3.5 2B Instruct",
+      "description": "Qwen 3.5 2B Instruct multimodal model. Optimized for text and vision tasks. 1.0 GB. Requires 6 GB device RAM.",
+      "version": "2be7f4df93418ddb4aa7da8bf33b584602a5b9f8",
+      "huggingface_repo": "paulsp94/Qwen3.5-2B-LiteRT-LM",
+      "size_bytes": 1069429648,
+      "sha256": "dae2948424603e26aa74c961f5494598d004b7af703ee954ec92c4e925bf1190",
+      "capabilities": ["text", "vision"],
+      "min_sdk": 31,
+      "min_device_memory_gb": 6,
+      "max_context_length": 32000,
+      "runtime": "litert-lm",
+      "files": [
+        {
+          "name": "qwen35_2b_q4.litertlm",
+          "size_bytes": 1069429648,
+          "sha256": "dae2948424603e26aa74c961f5494598d004b7af703ee954ec92c4e925bf1190"
+        }
+      ],
+      "default_config": {
+        "top_k": 40,
+        "top_p": 0.8,
+        "temperature": 0.7,
+        "max_tokens": 4000,
+        "accelerators": ["gpu", "cpu"]
+      }
+    },
+    {
+      "id": "qwen-3.5-0.8b-instruct",
+      "name": "Qwen 3.5 0.8B Instruct",
+      "description": "Qwen 3.5 0.8B Instruct multimodal model. Extremely lightweight text and vision model. 1.1 GB. Requires 4 GB device RAM.",
+      "version": "08be7f4df93418ddb4aa7da8bf33b584602a5b9f8",
+      "huggingface_repo": "GabrieleConte/Qwen3.5-0.8B-LiteRT",
+      "size_bytes": 1159757824,
+      "sha256": "92999fe4a9242c983e99892d6e57f368e8cd7a4534bc9a383a9551155b7f70a5",
+      "capabilities": ["text", "vision"],
+      "min_sdk": 31,
+      "min_device_memory_gb": 4,
+      "max_context_length": 32000,
+      "runtime": "litert-lm",
+      "files": [
+        {
+          "name": "qwen35_mm_q8_ekv2048.litertlm",
+          "size_bytes": 1159757824,
+          "sha256": "92999fe4a9242c983e99892d6e57f368e8cd7a4534bc9a383a9551155b7f70a5"
+        }
+      ],
+      "default_config": {
+        "top_k": 40,
+        "top_p": 0.8,
+        "temperature": 0.7,
+        "max_tokens": 4000,
+        "accelerators": ["gpu", "cpu"]
+      }
+    }
+  ]
+}

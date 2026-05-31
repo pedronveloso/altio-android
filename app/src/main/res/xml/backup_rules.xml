@@ -1,0 +1,9 @@
+<!--
+  SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<full-backup-content>
+    <!--
+   <include domain="sharedpref" path="."/>
+   <exclude domain="sharedpref" path="device.xml"/>
+-->
+</full-backup-content>
